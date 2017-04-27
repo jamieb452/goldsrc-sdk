@@ -1,0 +1,19 @@
+# Visual Studio files
+ipch/
+.vs/
+*.db
+*.opendb
+*.user
+*.suo
+*.sdf
+*.opensdf
+*.opensuo
+
+# Local environment
+[Bb]in/
+[Bb]uild/
+[Dd]ebug*/
+[Rr]elease*/
+/[Mm]erge/
+*.tmp
+ogs/utils/
