@@ -37,5 +37,6 @@ public:
 	virtual void drawUpdateRegionTextureBGRA(int textureID, int drawX, int drawY, unsigned const char *rgba, int subTextureWide, int subTextureTall) = 0;
 };
 
-#define ENGINE_SURFACE_VERSION "EngineSurface007"
-#endif
+#define ENGINE_SURFACE_VERSION "EngineSurface007" // ENGINESURFACE_INTERFACE_VERSION?
+
+#endif // IENGINESURFACE_H
