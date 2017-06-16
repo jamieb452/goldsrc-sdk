@@ -8,120 +8,154 @@
 #include <vgui/VGUI.h>
 #include "tier1/interface.h"
 
+#define GAMEUI_INTERFACE_VERSION "GameUI007"
+
+//class IBaseSystem;
+
+//typedef struct cl_enginefuncs_s cl_enginefunc_t;
+
+/// Reasons why the user can't connect to a game server
+enum ESteamLoginFailure
+{
+	STEAMLOGINFAILURE_NONE,
+	STEAMLOGINFAILURE_BADTICKET,
+	STEAMLOGINFAILURE_NOSTEAMLOGIN,
+	STEAMLOGINFAILURE_VACBANNED,
+	STEAMLOGINFAILURE_LOGGED_IN_ELSEWHERE,
+	STEAMLOGINFAILURE_CONNECTIONLOST,
+	STEAMLOGINFAILURE_NOCONNECTION
+};
+
+/// Interface to the GameUI library
+//class IGameUI007 : public IBaseInterface
 class IGameUI : public IBaseInterface
 {
 public:
-	virtual void Initialize(CreateInterfaceFn *factories, int count) = 0;
-	virtual void Start(struct cl_enginefuncs_s *engineFuncs, int interfaceVersion, void *system) = 0;
-	virtual void Shutdown() = 0;
-	
-	virtual int ActivateGameUI() = 0;
-	virtual int ActivateDemoUI() = 0;
-	
-	virtual int HasExclusiveInput() = 0;
-	
-	virtual void RunFrame() = 0;
-	
-	virtual void ConnectToServer(const char *game, int IP, int port) = 0;
-	virtual void DisconnectFromServer() = 0;
-	
-	virtual void HideGameUI() = 0;
-	virtual bool IsGameUIActive() = 0;
-	
-	virtual void LoadingStarted(const char *resourceType, const char *resourceName) = 0;
-	virtual void LoadingFinished(const char *resourceType, const char *resourceName) = 0;
-	
-	virtual void StartProgressBar(const char *progressType, int progressSteps) = 0;
-	virtual int ContinueProgressBar(int progressPoint, float progressFraction) = 0;
-	virtual void StopProgressBar(bool bError, const char *failureReason, const char *extendedReason = NULL) = 0;
-	
-	virtual int SetProgressBarStatusText(const char *statusText) = 0;
-	
-	virtual void SetSecondaryProgressBar(float progress) = 0;
-	virtual void SetSecondaryProgressBarText(const char *statusText) = 0;
-};
-
-extern IGameUI* g_pGameUI;
-
-#define GAMEUI_INTERFACE_VERSION "GameUI007"
-
-/*
-class IGameUI007 : public IBaseInterface
-{
-public:
-	// virtual destructor from IBaseInterface
-
-	// 0x04
-	// Phil: Implementation detail: actual factorys are from unknown,
+	/**
+	*	Called when this interface is first loaded. Initializes the game UI.
+	*	@param factories Array of factories to use
+	*	@param count Number of factories
+	*/
+	// Phil: Implementation detail: actual factories are from unknown,
 	//       vgui2.dll, filesystem.dll, gameui.dll, client.dll
-	virtual bool Init( CreateInterfaceFn *factoryList, int numFactories ) = 0;
+	virtual void Initialize(CreateInterfaceFn *factories, int count) = 0;
+	
+	/**
+	*	Sets up the game UI.
+	*/
+	virtual void Start(struct cl_enginefuncs_s *engineFuncs, int interfaceVersion, void *system) = 0;
+	//virtual void Start( cl_enginefunc_t* engineFuncs, int interfaceVersion, IBaseSystem* system ) = 0;
 
-	// 0x08
-	virtual void Start( struct cl_enginefuncs_s *enginefuncs, int interfaceVersion, IAppSystem *system ) = 0;
-
-	// 0x0c
+	/**
+	*	Shuts down the UI.
+	*/
 	virtual void Shutdown() = 0;
-
-	// 0x10
-	// Assuming this is the same as HL2 version...
+	
+	/**
+	*	Activates the Game UI, and pauses singleplayer games
+	*/
 	// Activates the menus, returns 0 if it doesn't want to handle it
 	virtual int ActivateGameUI() = 0;
-
-	// 0x14
-	virtual void ActivateDemoUI() = 0;
-
-	// 0x18
-	virtual bool HasExclusiveInput() = 0;
-
-	// 0x1c
-	// Assuming this is the same as HL2 version...
+	
+	/**
+	*	Opens the Demo dialog
+	*/
+	virtual int ActivateDemoUI() = 0;
+	
+	/**
+	*	@return Whether the Game UI has exclusive input at this time
+	*/
+	virtual int HasExclusiveInput() = 0; // return bool?
+	
+	/**
+	*	Should be called every frame
+	*/
 	virtual void RunFrame() = 0;
-
-	// 0x20
-	virtual void ConnectToServer( const char *game, int IP, int port ) = 0;
-
-	// 0x24
+	
+	/**
+	*	Call when connecting to a server
+	*	@param game Name of the game. This is the mod directory name
+	*/
+	virtual void ConnectToServer(const char *game, int IP, int port) = 0;
+	
+	/**
+	*	Call when disconnecting from a server
+	*/
 	virtual void DisconnectFromServer() = 0;
-
-	// 0x28
-	// Assuming this is the same as HL2 version...
+	
+	/**
+	*	Hides the Game UI if visible, and unpauses singleplayer games
+	*/
 	virtual void HideGameUI() = 0;
-
-	// 0x2c
-	// Assuming this is the same as HL2 version...
-	virtual bool IsGameUIActive() = 0;
-
-	// 0x30
-	virtual void LoadingStarted( const char *resourceType, const char *resourceName ) = 0;
-
-	// 0x34
-	virtual void LoadingFinished( const char *resourceType, const char *resourceName ) = 0;
-
-	// 0x38
-	virtual void StartProgressBar( const char *progressType, int numProgressPoints ) = 0;
-
-	// 0x3c
-	virtual int ContinueProgressBar( int progressPoint, float progressFraction ) = 0;
-
-	// 0x40
-	virtual void StopProgressBar( bool bError, const char *failureReasonIfAny, const char *extendedReason ) = 0;
-
-	// 0x44
-	virtual int SetProgressBarStatusText( const char *statusText ) = 0;
-
-	// 0x48
-	virtual void Unknown1( void *u1 ) = 0;
-
-	// 0x4c
-	// Maybe progress bar image/time left?
-	virtual void Unknown2( void *u1 ) = 0;
-
-	// 0x50
-	virtual void Unknown3( void *u1, void *u2 ) = 0;
-
-	// 0x54
-	virtual void Unknown4( void *u1, void *u2 ) = 0;
+	
+	/**
+	*	@return Whether the Game UI is visible
+	*/
+	virtual bool IsGameUIActive() = 0; // return int?
+	
+	/**
+	*	Call when a resource (e.g. "level") has started loading
+	*/
+	virtual void LoadingStarted(const char *resourceType, const char *resourceName) = 0;
+	
+	/**
+	*	Call when a resource (e.g. "level") has finished loading
+	*/
+	virtual void LoadingFinished(const char *resourceType, const char *resourceName) = 0;
+	
+	/**
+	*	Start the progress bar for an event
+	*	@param progresType Type of progress
+	*	@param progressSteps Number of steps in this event
+	*/
+	virtual void StartProgressBar(const char *progressType, int progressSteps) = 0;
+	
+	/**
+	*	Continues the progress bar
+	*	@param progressPoint Progress point that has been reached
+	*	@param progressFraction Fraction of point progress
+	*	@return Whether the loading dialog is visible
+	*/
+	virtual int ContinueProgressBar(int progressPoint, float progressFraction) = 0;
+	
+	/**
+	*	Stops the progress bar
+	*	@param bError Whether an error occurred to stop progress
+	*	@param failureReason If this is an error, displays this as the reason
+	*	@param extendedReason If this is an error, displays this as the description for the reason
+	*/
+	virtual void StopProgressBar(bool bError, const char *failureReason, const char *extendedReason = "") = 0;
+	
+	/**
+	*	Sets the progress bar status text
+	*	@param statusText Text to set
+	*	@return Whether the text could be set
+	*/
+	virtual int SetProgressBarStatusText(const char *statusText) = 0;
+	
+	/**
+	*	Sets the secondary progress bar's progress
+	*/
+	virtual void SetSecondaryProgressBar(float progress) = 0;
+	
+	/**
+	*	Sets the secondary progress bar's text
+	*/
+	virtual void SetSecondaryProgressBarText(const char *statusText) = 0;
+	
+	/**
+	*	Obsolete, does nothing
+	*/
+	virtual void ValidateCDKey( bool force, bool inConnect ) = 0;
+	
+	/**
+	*	Call when the client has disconnected due to a Steam login failure
+	*	@param eSteamLoginFailure Steam error code
+	*	@param username Client username to display
+	*/
+	virtual void OnDisconnectFromServer( int eSteamLoginFailure, const char* username ) = 0;
 };
-*/
+
+extern IGameUI *g_pGameUI;
 
 #endif // IGAMEUI_H

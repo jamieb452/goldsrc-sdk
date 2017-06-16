@@ -12,7 +12,10 @@
 #endif
 
 #include "interface.h"
-#include <vgui/VGUI2.h>
+#include <vgui/VGUI2.h> // <vgui/VGUI.h>
+
+#define VGUIMODULE_INTERFACE_VERSION "VGuiModule002"
+//#define VGUIMODULE_INTERFACE_VERSION "VGuiModuleAdminServer001"
 
 //-----------------------------------------------------------------------------
 // Purpose: Standard interface to loading vgui modules
@@ -59,8 +62,5 @@ public:
 	//	"LoadingStarted"	"type"	"name"
 	//  "LoadingFinished"	"type"	"name"
 };
-
-#define VGUIMODULE_INTERFACE_VERSION "VGuiModule002"
-
 
 #endif // IVGUIMODULE_H

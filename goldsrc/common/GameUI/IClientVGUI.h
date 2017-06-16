@@ -6,19 +6,67 @@
 #endif
 
 #include "public/interface.h"
+//#include <vgui/VGUI2.h>
 
+#define CLIENTVGUI_INTERFACE_VERSION "VClientVGUI001"
+
+/// Client VGUI2 interface. Enables the client library to use VGUI2
 class IClientVGUI : public IBaseInterface
 {
 public:
+	/**
+	*	Called when this interface is first loaded. Initializes the client UI.
+	*	@param pFactories Array of factories to use.
+	*	@param iNumFactories Number of factories.
+	*/
 	virtual void Initialize(CreateInterfaceFn *factories, int count) = 0;
-	virtual void Start(void) = 0;
-	virtual void SetParent(vgui::VPANEL parent) = 0;
-	virtual bool UseVGUI1(void) = 0;
-	virtual void HideScoreBoard(void) = 0;
-	virtual void HideAllVGUIMenu(void) = 0;
-	virtual void ActivateClientUI(void) = 0;
-	virtual void HideClientUI(void) = 0;
+	
+	/**
+	*	Called after the client UI has been initialized and the parent has been set.
+	*/
+	virtual void Start() = 0;
+	
+	/**
+	*	Sets the parent panel. The root client panel should set this as its parent.
+	*	@param parent Parent panel.
+	*/
+	virtual void SetParent(vgui::VPANEL parent) = 0; // vgui2::VPANEL
+	
+	/**
+	*	@return 1 if VGUI1 should be used, 0 if VGUI2 should be used.
+	*/
+	virtual bool UseVGUI1() = 0; // int?
+	
+	/**
+	*	Tells the client to hide the score board panel.
+	*	Called when the game UI is made visible (main menu, etc).
+	*/
+	virtual void HideScoreBoard() = 0;
+	
+	/**
+	*	Tells the client to hide all menus, dialogs and windows.
+	*	Called when the loading progress bar has been stopped.
+	*/
+	virtual void HideAllVGUIMenu() = 0;
+	
+	/**
+	*	Tells the client to activate its UI.
+	*	Called when the game UI is hidden.
+	*/
+	virtual void ActivateClientUI() = 0;
+	
+	/**
+	*	Tells the client to hide its UI.
+	*	Called when the game UI is activated.
+	*/
+	
+	virtual void HideClientUI() = 0;
+	
+	/**
+	*	Shuts down the client UI.
+	*	Note: only called for CS & CZero, do not use! - Solokiller
+	*/
+	//virtual void Shutdown() = 0;
 };
 
-#define CLIENTVGUI_INTERFACE_VERSION "VClientVGUI001"
-#endif
+#endif // ICLIENTVGUI_H
