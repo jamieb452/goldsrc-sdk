@@ -8,8 +8,8 @@
 #ifndef VGUI_ETCHEDBORDER_H
 #define VGUI_ETCHEDBORDER_H
 
-#include<VGUI.h>
-#include<VGUI_Border.h>
+#include "VGUI.h"
+#include "VGUI_Border.h"
 
 namespace vgui
 {

@@ -8,8 +8,8 @@
 #ifndef VGUI_BORDERPAIR_H
 #define VGUI_BORDERPAIR_H
 
-#include<VGUI.h>
-#include<VGUI_Border.h>
+#include "VGUI.h"
+#include "VGUI_Border.h"
 
 namespace vgui
 {

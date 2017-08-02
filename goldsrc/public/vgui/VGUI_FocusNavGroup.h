@@ -8,8 +8,8 @@
 #ifndef VGUI_FOCUSNAVGROUP_H
 #define VGUI_FOCUSNAVGROUP_H
 
-#include<VGUI.h>
-#include<VGUI_Dar.h>
+#include "VGUI.h"
+#include "VGUI_Dar.h"
 
 namespace vgui
 {

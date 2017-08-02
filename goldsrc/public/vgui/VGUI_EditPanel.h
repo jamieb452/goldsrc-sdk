@@ -8,9 +8,9 @@
 #ifndef VGUI_EDITPANEL_H
 #define VGUI_EDITPANEL_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
-#include<VGUI_Dar.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
+#include "VGUI_Dar.h"
 
 namespace vgui
 {

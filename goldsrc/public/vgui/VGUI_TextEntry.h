@@ -8,9 +8,9 @@
 #ifndef VGUI_TEXTENTRY_H
 #define VGUI_TEXTENTRY_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
-#include<VGUI_InputSignal.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
+#include "VGUI_InputSignal.h"
 
 namespace vgui
 {

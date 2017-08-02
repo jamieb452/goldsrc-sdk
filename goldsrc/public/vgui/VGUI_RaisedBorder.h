@@ -8,8 +8,8 @@
 #ifndef VGUI_RAISEDBORDER_H
 #define VGUI_RAISEDBORDER_H
 
-#include<VGUI.h>
-#include<VGUI_Border.h>
+#include "VGUI.h"
+#include "VGUI_Border.h"
 
 namespace vgui
 {

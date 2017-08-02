@@ -14,7 +14,6 @@
 #pragma once
 #endif
 
-#include "osconfig.h"
 #include <stddef.h>
 #include "tier0/mem.h"
 

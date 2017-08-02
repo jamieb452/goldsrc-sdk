@@ -8,7 +8,7 @@
 #ifndef VGUI_BITMAPTGA_H
 #define VGUI_BITMAPTGA_H
 
-#include<VGUI_Bitmap.h>
+#include "VGUI_Bitmap.h"
 
 namespace vgui
 {

@@ -8,10 +8,10 @@
 #ifndef VGUI_BUILDGROUP_H
 #define VGUI_BUILDGROUP_H
 
-#include<VGUI.h>
-#include<VGUI_Dar.h>
-#include <VGUI_MouseCode.h>
-#include <VGUI_KeyCode.h>
+#include "VGUI.h"
+#include "VGUI_Dar.h"
+#include "VGUI_MouseCode.h"
+#include "VGUI_KeyCode.h"
 
 namespace vgui
 {

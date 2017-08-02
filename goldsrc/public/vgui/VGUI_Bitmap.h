@@ -8,8 +8,8 @@
 #ifndef VGUI_BITMAP_H
 #define VGUI_BITMAP_H
 
-#include<VGUI.h>
-#include<VGUI_Image.h>
+#include "VGUI.h"
+#include "VGUI_Image.h"
 
 namespace vgui
 {

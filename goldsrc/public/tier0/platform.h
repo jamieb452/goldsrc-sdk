@@ -11,7 +11,6 @@
 // Extremely low-level platform-specific stuff
 //=============================================================================
 
-
 #ifndef PLATFORM_H
 #define PLATFORM_H
 
@@ -19,13 +18,38 @@
 #pragma once
 #endif
 
-#include "rehlds/osconfig.h"
+#if defined(__x86_64__) || defined(_WIN64)
+#define PLATFORM_64BITS 1
+#endif
+
+#if defined(__GCC__) || defined(__GNUC__)
+#define COMPILER_GCC 1
+#endif
+
+#ifdef __clang__
+#define COMPILER_CLANG 1
+#endif
+
+#include "wchartypes.h"
+#include "basetypes.h"
+#include "tier0/valve_off.h"
+
+#ifdef POSIX
+// need this for _alloca
+#include <alloca.h>
+#include <unistd.h>
+#include <signal.h>
+#include <time.h>
+#endif
 
 // need this for _alloca
 #include <malloc.h>
+#include <new>
 
 // need this for memset
 #include <string.h>
+
+#include "tier0/valve_minmax_on.h"	// GCC 4.2.2 headers screw up our min/max defs.
 
 #include "public/archtypes.h"
 

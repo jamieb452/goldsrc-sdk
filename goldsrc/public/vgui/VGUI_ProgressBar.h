@@ -8,8 +8,8 @@
 #ifndef VGUI_PROGRESSBAR_H
 #define VGUI_PROGRESSBAR_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
 
 namespace vgui
 {

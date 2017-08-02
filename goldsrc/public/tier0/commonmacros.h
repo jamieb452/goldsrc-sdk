@@ -19,7 +19,7 @@
 //
 // -------------------------------------------------------
 
-#include "public/rehlds/osconfig.h"
+#include "tier0/platform.h"
 
 // Makes a 4-byte "packed ID" int out of 4 characters
 #define MAKEID(d,c,b,a)					( ((int)(a) << 24) | ((int)(b) << 16) | ((int)(c) << 8) | ((int)(d)) )
@@ -31,8 +31,8 @@
 #define ARRAYSIZE(p)		(sizeof(p)/sizeof(p[0]))
 
 // Keeps clutter down a bit, when using a float as a bit-vector
-#define SetBitd(flBitVector, bits)		((flBitVector) = (int)(flBitVector) | (bits))
+#define SetBits(flBitVector, bits)		((flBitVector) = (int)(flBitVector) | (bits))
 #define ClearBits(flBitVector, bits)	((flBitVector) = (int)(flBitVector) & ~(bits))
 #define FBitSet(flBitVector, bit)		((int)(flBitVector) & (bit))
 
-#endif		// COMMONMACROS_H
+#endif // COMMONMACROS_H

@@ -8,7 +8,7 @@
 #ifndef VGUI_MINIAPP_H
 #define VGUI_MINIAPP_H
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {

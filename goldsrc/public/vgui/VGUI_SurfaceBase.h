@@ -8,8 +8,8 @@
 #ifndef VGUI_SURFACEBASE_H
 #define VGUI_SURFACEBASE_H
 
-#include<VGUI.h>
-#include<VGUI_Dar.h>
+#include "VGUI.h"
+#include "VGUI_Dar.h"
 
 namespace vgui
 {

@@ -8,7 +8,7 @@
 #ifndef VGUI_FRAMESIGNAL_H
 #define VGUI_FRAMESIGNAL_H
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {

@@ -11,7 +11,6 @@
 // The main debug library interfaces
 //=============================================================================
 
-
 #ifndef DBG_H
 #define DBG_H
 
@@ -19,13 +18,16 @@
 #pragma once
 #endif
 
-#include "rehlds/osconfig.h"
 #include "tier0/basetypes.h"
+#include "dbgflag.h"
 #include "tier0/platform.h"
 #include <math.h>
 #include <stdio.h>
 #include <stdarg.h>
 
+#ifdef POSIX
+#define __cdecl
+#endif
 
 //-----------------------------------------------------------------------------
 // dll export stuff

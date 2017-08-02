@@ -8,7 +8,7 @@
 #ifndef VGUI_FONT_H
 #define VGUI_FONT_H
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {

@@ -8,9 +8,9 @@
 #ifndef VGUI_IMAGE_H
 #define VGUI_IMAGE_H
 
-#include<VGUI.h>
-#include<VGUI_Scheme.h>
-#include<VGUI_Color.h>
+#include "VGUI.h"
+#include "VGUI_Scheme.h"
+#include "VGUI_Color.h"
 
 //TODO:: needs concept of insets
 

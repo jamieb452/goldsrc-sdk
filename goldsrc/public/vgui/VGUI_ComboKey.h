@@ -8,7 +8,7 @@
 #ifndef VGUI_COMBOKEY_H
 #define VGUI_COMBOKEY_H
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {

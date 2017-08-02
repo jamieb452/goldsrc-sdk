@@ -8,8 +8,8 @@
 #ifndef VGUI_STACKLAYOUT_H
 #define VGUI_STACKLAYOUT_H
 
-#include<VGUI.h>
-#include<VGUI_Layout.h>
+#include "VGUI.h"
+#include "VGUI_Layout.h"
 
 namespace vgui
 {

@@ -8,9 +8,9 @@
 #ifndef VGUI_TEXTPANEL_H
 #define VGUI_TEXTPANEL_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
-#include<VGUI_Scheme.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
+#include "VGUI_Scheme.h"
 
 //NOTE : If you are having trouble with this class, your problem is probably in TextImage
 

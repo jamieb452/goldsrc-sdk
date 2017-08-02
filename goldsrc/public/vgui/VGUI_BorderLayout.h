@@ -8,8 +8,8 @@
 #ifndef VGUI_BORDERLAYOUT_H
 #define VGUI_BORDERLAYOUT_H
 
-#include<VGUI.h>
-#include<VGUI_Layout.h>
+#include "VGUI.h"
+#include "VGUI_Layout.h"
 
 namespace vgui
 {

@@ -8,8 +8,8 @@
 #ifndef VGUI_DATAINPUTSTREAM_H
 #define VGUI_DATAINPUTSTREAM_H
 
-#include<VGUI.h>
-#include<VGUI_InputStream.h>
+#include "VGUI.h"
+#include "VGUI_InputStream.h"
 
 namespace vgui
 {

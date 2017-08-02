@@ -11,23 +11,23 @@
 #pragma once
 #endif
 
-#include "rehlds/osconfig.h"
-#include "platform.h"
+#ifdef _WIN32
+#include <intrin.h>
+#endif
 
-PLATFORM_INTERFACE __int64 g_ClockSpeed;
+#include <assert.h>
+#include "tier0/platform.h"
+
+PLATFORM_INTERFACE __int64 g_ClockSpeed; // uint64
 PLATFORM_INTERFACE unsigned long g_dwClockSpeed;
 
 PLATFORM_INTERFACE double g_ClockSpeedMicrosecondsMultiplier;
 PLATFORM_INTERFACE double g_ClockSpeedMillisecondsMultiplier;
 PLATFORM_INTERFACE double g_ClockSpeedSecondsMultiplier;
 
-
-
 class CCycleCount
 {
 	friend class CFastTimer;
-
-
 public:
 	CCycleCount();
 

@@ -8,10 +8,10 @@
 #ifndef VGUI_LABEL_H
 #define VGUI_LABEL_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
-#include<VGUI_Scheme.h>
-#include<VGUI_Image.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
+#include "VGUI_Scheme.h"
+#include "VGUI_Image.h"
 
 //TODO: this should use a TextImage for the text
 

@@ -8,9 +8,9 @@
 #ifndef VGUI_DESKTOP_H
 #define VGUI_DESKTOP_H
 
-#include<VGUI.h>
-#include<VGUI_Dar.h>
-#include<VGUI_Panel.h>
+#include "VGUI.h"
+#include "VGUI_Dar.h"
+#include "VGUI_Panel.h"
 
 namespace vgui
 {

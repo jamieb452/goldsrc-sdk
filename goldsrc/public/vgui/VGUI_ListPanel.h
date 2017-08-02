@@ -8,8 +8,8 @@
 #ifndef VGUI_LISTPANEL_H
 #define VGUI_LISTPANEL_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
 
 namespace vgui
 {

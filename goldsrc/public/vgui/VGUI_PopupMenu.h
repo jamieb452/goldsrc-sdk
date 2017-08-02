@@ -8,8 +8,8 @@
 #ifndef VGUI_POPUPMENU_H
 #define VGUI_POPUPMENU_H
 
-#include<VGUI.h>
-#include<VGUI_Menu.h>
+#include "VGUI.h"
+#include "VGUI_Menu.h"
 
 namespace vgui
 {

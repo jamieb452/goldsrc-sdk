@@ -12,7 +12,6 @@
 // by including memdbgoff.h)
 
 // SPECIAL NOTE #2: This must be the final include in a .cpp or .h file!!!
-#include "rehlds/osconfig.h"
 
 #ifdef _DEBUG
 

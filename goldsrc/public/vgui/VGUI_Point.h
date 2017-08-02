@@ -11,7 +11,7 @@
 #pragma once
 #endif
 
-#include <VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {

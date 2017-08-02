@@ -8,7 +8,7 @@
 #ifndef VGUI_INTCHANGESIGNAL_H
 #define VGUI_INTCHANGESIGNAL_H
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {

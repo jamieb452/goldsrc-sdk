@@ -8,8 +8,8 @@
 #ifndef VGUI_TREEFOLDER_H
 #define VGUI_TREEFOLDER_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
 
 namespace vgui
 {

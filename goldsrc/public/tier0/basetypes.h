@@ -11,10 +11,9 @@
 #pragma once
 #endif
 
-#include "rehlds/osconfig.h"
-#include "protected_things.h"
 #include "commonmacros.h"
-
+#include "wchartypes.h"
+#include "protected_things.h"
 
 // For backward compatibilty only...
 #include "tier0/platform.h"
@@ -23,7 +22,6 @@
 #ifndef NULL
 #define NULL 0
 #endif
-
 
 #define ExecuteNTimes( nTimes, x )	\
 				{								\
@@ -62,7 +60,6 @@
 #define TRUE (!FALSE)
 #endif
 
-
 typedef int BOOL;
 typedef int qboolean;
 typedef unsigned long ULONG;
@@ -71,7 +68,6 @@ typedef unsigned char byte;
 typedef unsigned short word;
 
 typedef float vec_t;
-
 
 // FIXME: this should move 
 #ifndef __cplusplus

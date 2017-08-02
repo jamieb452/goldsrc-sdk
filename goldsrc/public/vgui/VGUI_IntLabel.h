@@ -8,9 +8,9 @@
 #ifndef VGUI_INTLABEL_H
 #define VGUI_INTLABEL_H
 
-#include<VGUI.h>
-#include<VGUI_Label.h>
-#include<VGUI_IntChangeSignal.h>
+#include "VGUI.h"
+#include "VGUI_Label.h"
+#include "VGUI_IntChangeSignal.h"
 
 namespace vgui
 {

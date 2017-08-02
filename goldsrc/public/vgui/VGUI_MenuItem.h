@@ -8,8 +8,8 @@
 #ifndef VGUI_MENUITEM_H
 #define VGUI_MENUITEM_H
 
-#include<VGUI.h>
-#include<VGUI_Button.h>
+#include "VGUI.h"
+#include "VGUI_Button.h"
 
 namespace vgui
 {

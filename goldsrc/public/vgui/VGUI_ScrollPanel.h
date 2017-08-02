@@ -8,8 +8,8 @@
 #ifndef VGUI_SCROLLPANEL_H
 #define VGUI_SCROLLPANEL_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
 
 //NOTE: You need to call validate anytime you change a scrollbar
 

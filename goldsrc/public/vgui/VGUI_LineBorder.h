@@ -8,9 +8,9 @@
 #ifndef VGUI_LINEBORDER_H
 #define VGUI_LINEBORDER_H
 
-#include<VGUI.h>
-#include<VGUI_Border.h>
-#include<VGUI_Color.h>
+#include "VGUI.h"
+#include "VGUI_Border.h"
+#include "VGUI_Color.h"
 
 namespace vgui
 {

@@ -8,7 +8,7 @@
 #ifndef VGUI_FOCUSCHANGESIGNAL_H
 #define VGUI_FOCUSCHANGESIGNAL_H
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {

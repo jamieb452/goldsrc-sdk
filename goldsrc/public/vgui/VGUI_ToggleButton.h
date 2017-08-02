@@ -8,8 +8,8 @@
 #ifndef VGUI_TOGGLEBUTTON_H
 #define VGUI_TOGGLEBUTTON_H
 
-#include<VGUI.h>
-#include<VGUI_Button.h>
+#include "VGUI.h"
+#include "VGUI_Button.h"
 
 namespace vgui
 {

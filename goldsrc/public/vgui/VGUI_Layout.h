@@ -8,7 +8,7 @@
 #ifndef VGUI_LAYOUT_H
 #define VGUI_LAYOUT_H
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {

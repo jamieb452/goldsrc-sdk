@@ -8,9 +8,9 @@
 #ifndef VGUI_SURFACE_H
 #define VGUI_SURFACE_H
 
-#include<VGUI.h>
-#include<VGUI_SurfaceBase.h>
-#include<VGUI_Dar.h>
+#include "VGUI.h"
+#include "VGUI_SurfaceBase.h"
+#include "VGUI_Dar.h"
 
 namespace vgui
 {

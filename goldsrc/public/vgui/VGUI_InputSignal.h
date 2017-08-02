@@ -8,7 +8,7 @@
 #ifndef VGUI_INPUTSIGNAL_H
 #define VGUI_INPUTSIGNAL_H
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {

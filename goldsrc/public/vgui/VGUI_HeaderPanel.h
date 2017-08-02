@@ -8,10 +8,10 @@
 #ifndef VGUI_HEADERPANEL_H
 #define VGUI_HEADERPANEL_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
-#include<VGUI_Dar.h>
-#include<VGUI_Cursor.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
+#include "VGUI_Dar.h"
+#include "VGUI_Cursor.h"
 
 namespace vgui
 {

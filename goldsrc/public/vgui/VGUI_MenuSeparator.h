@@ -8,8 +8,8 @@
 #ifndef VGUI_MENUSEPARATOR_H
 #define VGUI_MENUSEPARATOR_H
 
-#include<VGUI.h>
-#include<VGUI_Label.h>
+#include "VGUI.h"
+#include "VGUI_Label.h"
 
 namespace vgui
 {

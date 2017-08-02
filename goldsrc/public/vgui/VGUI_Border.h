@@ -8,8 +8,8 @@
 #ifndef VGUI_BORDER_H
 #define VGUI_BORDER_H
 
-#include<VGUI.h>
-#include<VGUI_Image.h>
+#include "VGUI.h"
+#include "VGUI_Image.h"
 
 //TODO: all borders should be titled
 

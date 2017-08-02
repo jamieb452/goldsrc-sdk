@@ -8,8 +8,8 @@
 #ifndef VGUI_CONFIGWIZARD_H
 #define VGUI_CONFIGWIZARD_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
 
 namespace vgui
 {

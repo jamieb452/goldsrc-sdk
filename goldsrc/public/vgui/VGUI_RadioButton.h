@@ -8,8 +8,8 @@
 #ifndef VGUI_RADIOBUTTON_H
 #define VGUI_RADIOBUTTON_H
 
-#include<VGUI.h>
-#include<VGUI_ToggleButton.h>
+#include "VGUI.h"
+#include "VGUI_ToggleButton.h"
 
 namespace vgui
 {

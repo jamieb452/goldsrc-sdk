@@ -8,9 +8,9 @@
 #ifndef VGUI_SCROLLBAR_H
 #define VGUI_SCROLLBAR_H
 
-#include<VGUI.h>
-#include<VGUI_Panel.h>
-#include<VGUI_Dar.h>
+#include "VGUI.h"
+#include "VGUI_Panel.h"
+#include "VGUI_Dar.h"
 
 namespace vgui
 {

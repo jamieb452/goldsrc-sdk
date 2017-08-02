@@ -8,7 +8,7 @@
 #ifndef VGUI_ACTIONSIGNAL_H
 #define VGUI_ACTIONSIGNAL_H
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 /*
 
@@ -64,7 +64,7 @@ virtual void fireActionSignal()
 
 */
 
-#include<VGUI.h>
+#include "VGUI.h"
 
 namespace vgui
 {
