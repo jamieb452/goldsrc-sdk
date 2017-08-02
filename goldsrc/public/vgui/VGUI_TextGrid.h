@@ -8,7 +8,7 @@
 #ifndef VGUI_TEXTGRID_H
 #define VGUI_TEXTGRID_H
 
-#include "stdarg.h"
+#include <stdarg.h>
 #include "VGUI.h"
 #include "VGUI_Panel.h"
 

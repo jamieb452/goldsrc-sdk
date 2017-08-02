@@ -37,8 +37,8 @@ typedef unsigned short wchar_t;
 # pragma comment(lib,"opengl32.lib")
 #endif
 
-#include "GL/gl.h"
-#include "GL/glu.h"
+#include <GL/gl.h>
+#include <GL/glu.h>
 
 #ifdef VGUI_APIENTRY_DEFINED
 # undef VGUI_APIENTRY_DEFINED
