@@ -16,4 +16,4 @@ ipch/
 [Rr]elease*/
 /[Mm]erge/
 *.tmp
-goldsrc/utils/vgui
+goldsrc/utils/vgui/lib
